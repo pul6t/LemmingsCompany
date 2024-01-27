@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Lemmings Company </title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3745/3745273.png" type="image/png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_stock.css') }}">
+</head>
+
+<body>
+    <button type="button" class="btn">{{ name }} (id: {{ id }}) </button>
+    <div class="container2">
+        <img src="{{ url_for('static', filename='img/SBER.png') }}">
+        <table border="1" class="center">
+            <thead>
+                <tr>
+                    {% for row in args %}
+                    <th>
+                        <h1> {{ row }}</h1>
+                    </th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in ticker %}
+                <tr>
+                    {% for item in row %}
+                    <td> {{ item }} </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <script>
+        // превращает кнопку в рычаг (minecraft reference)
+        var coll = document.getElementsByClassName("btn");
+        var i;
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+.container {
+    width: 100%;
+    max-width: 2100px;
+    padding: 20px 0px;
+    margin: 0 auto;
+}
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #A8C397;
+    position: fixed;
+}
+
+body {
+    background-color: #F0EFC9;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    background-color: #F0EFC9;
+}
+
+.logo_name {
+    float: left;
+    display: inline;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.logo {
+    float: left;
+    display: inline;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+nav {
+    float: right;
+    display: inline;
+    margin-right: 60px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline;
+}
+
+nav li {
+    display: inline-block; /*один из способов разместить элементы в строку*/
+    font-family: "Roboto", sans-serif;
+}
+
+nav a {
+    text-decoration: none;
+    line-height: 45px;
+    font-size: 24px;
+    font-style: normal;
+    color: black;
+}
+
+.stock {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+}
+
